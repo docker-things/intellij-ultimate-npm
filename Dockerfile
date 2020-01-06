@@ -8,7 +8,9 @@ RUN apt-get update \
         libxtst6 \
         wget \
         git \
-        npm \
+ \
+ && curl -sL https://deb.nodesource.com/setup_13.x | sudo -E bash - \
+ && sudo apt-get install -y nodejs \
  \
  && wget "$DOWNLOAD_URL" -O /tmp/intellij-ultimate.tar.gz \
  && mkdir /app \
