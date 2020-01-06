@@ -1,1 +1,1 @@
-# intellij-ultimate-npm
+# intelij-ultimate
