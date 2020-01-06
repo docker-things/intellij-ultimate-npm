@@ -9,9 +9,11 @@ RUN apt-get update \
         wget \
         curl \
         git \
+        sudo \
  \
  && curl -sL https://deb.nodesource.com/setup_13.x | sudo -E bash - \
- && apt-get install -y nodejs \
+ && apt-get install -y \
+        nodejs \
  \
  && wget "$DOWNLOAD_URL" -O /tmp/intellij-ultimate.tar.gz \
  && mkdir /app \
