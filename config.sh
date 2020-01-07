@@ -14,7 +14,8 @@ PROJECT_NAME="intellij-ultimate-npm"
 
 # BUILD ARGS
 BUILD_ARGS=(
-    --build-arg DOWNLOAD_URL="https://download-cf.jetbrains.com/idea/ideaIU-2019.3.1.tar.gz"
+    --build-arg INTELLIJ_DOWNLOAD_URL="https://download-cf.jetbrains.com/idea/ideaIU-2019.3.1.tar.gz"
+    --build-arg NODE_DOWNLOAD_URL="https://deb.nodesource.com/setup_13.x"
     )
 
 # LAUNCH ARGS
