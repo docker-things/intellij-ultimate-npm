@@ -1,7 +1,8 @@
 FROM gui-apps-base:18.04
 MAINTAINER Gabriel Ionescu <gabi.ionescu+dockerthings@protonmail.com>
 
-ARG DOWNLOAD_URL
+ARG INTELLIJ_DOWNLOAD_URL
+ARG NODE_DOWNLOAD_URL
 
 RUN apt-get update \
  && apt-get install -y --no-install-recommends \
@@ -11,11 +12,11 @@ RUN apt-get update \
         git \
         sudo \
  \
- && curl -sL https://deb.nodesource.com/setup_13.x | sudo -E bash - \
+ && curl -sL "$NODE_DOWNLOAD_URL" | sudo -E bash - \
  && apt-get install -y \
         nodejs \
  \
- && wget "$DOWNLOAD_URL" -O /tmp/intellij-ultimate.tar.gz \
+ && wget "$INTELLIJ_DOWNLOAD_URL" -O /tmp/intellij-ultimate.tar.gz \
  && mkdir /app \
  && cd /app && tar -xvf /tmp/intellij-ultimate.tar.gz \
  && mv "/app/`ls /app`" /app/intellij-ultimate \
