@@ -11,6 +11,7 @@ RUN apt-get update \
         curl \
         gettext \
         git \
+        ssh \
         sudo \
  \
  && curl -sL "$NODE_DOWNLOAD_URL" | sudo -E bash - \
