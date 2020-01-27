@@ -9,6 +9,7 @@ RUN apt-get update \
         libxtst6 \
         wget \
         curl \
+        gettext \
         git \
         sudo \
  \
